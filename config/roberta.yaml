@@ -1,0 +1,36 @@
+main:
+    seed: 42
+
+    train_batch_size: 32
+    valid_batch_size: 32
+    test_batch_size: 32
+    num_workers: 8
+    
+    extended_data: False
+    extended_path: None
+    
+    main_train_path: src/data/train.csv
+    main_test_path: src/data/test.csv
+    n_folds: 5
+    target_col: score
+    
+tokenizer:
+    max_length: 512
+    add_special_tokens: True
+    return_tensors: pt
+    padding: max_length
+    truncation: True
+
+model: 
+    path: roberta-large
+    max_length: 512
+    
+criterion: 
+    criterion_type: regression
+    
+train_params:
+    num_train_epochs: 5
+    check_val_every: 200
+    
+logger:
+    logger_name: roberta-large
