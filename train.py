@@ -1,6 +1,5 @@
 import sys
 import os
-sys.path.insert(0, "/home/jovyan/.local/share/virtualenvs/ptls-experiments-w-dEu3oS/lib/python3.8/site-packages")
 os.environ["OMP_NUM_THREADS"] = "4"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
